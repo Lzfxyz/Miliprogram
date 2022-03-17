@@ -1,4 +1,14 @@
 <!--index.wxml-->
-<view class="container">
-  Weixin
-</view>
+<view>{{message}}</view>
+<button size="mini"
+        open-type="getUserInfo"
+        bindgetuserinfo="handlegetUserInfo">
+        获取用户信息
+</button>
+<view>{{userInfo}}</view>
+
+<!-- 展示用户信息 -->
+<open-data type="userNickName"></open-data>
+<open-data type="userAvatarUrl"></open-data>
+
+<view wx:for="{{movies}}" wx:key="item">{{item}}</view>
