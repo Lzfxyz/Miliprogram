@@ -1,5 +1,9 @@
 {
     "pages": [
+        "pages/button/button",
+        "pages/inputs/inputs",
+        "pages/scroll/scroll",
+        "pages/image/image",
         "pages/index/index"
     ],
     "window": {

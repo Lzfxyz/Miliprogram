@@ -1,0 +1,21 @@
+<!--pages/inputs/inputs.wxml-->
+<!-- value 设置默认值 -->
+<input class="inputs" value="哈哈哈"/>
+<!-- type 输入的类型 -->
+<input class="inputs" type="number"/>
+<!--password 密码类型 -->
+<input class="inputs"	password/>
+<!-- placeholder-style 设置placeholder的样式 -->
+<input class="inputs"	placeholder="input为空时的占位符" 	placeholder-style="color:red"/>
+<!--
+    bindinput 键盘输入时触发
+    bindfocus 聚焦时
+    bindblur 失去焦距  
+-->
+<input class="inputs"
+       bindinput="handleInput"
+       bindfocus="handleFocus"
+       bindblur="handleBlur"/>
+
+<!-- focus自动聚焦 -->
+<input class="inputs" placeholder="自动聚焦" focus="{{true}}"/>
