@@ -1,4 +1,44 @@
 <!--index.wxml-->
-<view class="container">
-  Weixin
-</view>
+<!--template 模板  -->
+<template name="info">
+    <button size="mini">按钮</button>
+    <view>呵呵呵</view>
+</template>
+
+<template name="info1">
+    <button size="mini">{{button}}</button>
+    <view>{{text}}</view>
+</template>
+
+<!-- 模板的使用 -->
+<template is="info" />
+<template is="info1" data="{{button:'按钮',text:'哈哈哈'}}" />
+<template is="info1" data="{{button:'按钮',text:'嘿嘿嘿'}}" />
+<template is="info1" data="{{button:'按钮',text:'嘻嘻嘻'}}" />
+<template is="info1" data="{{button:'按钮',text:'哦哦哦'}}" />
+
+<!-- 导入模板 -->
+<import src="/wxml/template" />
+<template is="text" data="{{text1:'花儿为什么那么红',text2:'养的好'}}"/>
+<!-- include 可以将目标文件除了 <template/> <wxs/> 外的整个代码引入，
+相当于是拷贝到 include 位置 -->
+<include src="/wxml/template" />
+
+<view>----------------wxs的应用--------------</view>
+<wxs module="info">
+    var message = "Hello World"
+    var sum = function(num1,num2){
+        return num1 + num2
+    }
+    module.exports = {
+        message:message,
+        sum:sum
+    }
+</wxs>
+
+<view>{{info.message}}</view>
+<view>{{info.sum(2,3)}}</view>
+
+<!-- wxs的导入 -->
+<wxs src="../../wxs/wxs.wxs" module="format"/>
+<view>{{format.priceFormat(price,2)}}</view>

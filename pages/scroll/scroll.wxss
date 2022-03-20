@@ -1,0 +1,26 @@
+/* pages/scroll/scroll.wxss */
+.box{
+    height: 200rpx;
+    white-space: nowrap;
+    background-color: turquoise;
+}
+.box1{
+    margin: 10rpx;
+    width: 100rpx;
+    height: 100rpx;
+    background-color: tomato;
+    display: inline-block;
+
+}
+.box2{
+    margin-top: 20px;
+    height: 400rpx;
+    width: 300rpx;
+    background-color: teal;
+}
+.box3{
+    margin-top: 20px;
+    height: 400rpx;
+    width: 200rpx;
+    background-color: thistle;
+}

@@ -1,0 +1,22 @@
+/* pages/button/button.wxss */
+button{
+    margin: 5px;
+}
+.pressed{
+    background-color: turquoise;
+    color: #fff;
+}
+.box{
+    height: 200px;
+    width: 200px;
+    background-color: bisque;
+}
+.box-hover{
+    background-color: violet;
+}
+.box1{
+    background-color: turquoise;
+}
+.box1-hover{
+    background-color: tomato;
+}

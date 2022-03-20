@@ -1,2 +1,6 @@
 // index.js
-Page({})
+Page({
+    data:{
+        price:'26.6666666'
+    }
+})
