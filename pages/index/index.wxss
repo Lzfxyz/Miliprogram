@@ -1,1 +1,7 @@
 /**index.wxss**/
+.color{
+    color: turquoise;
+}
+.color1{
+    color:tomato;
+}

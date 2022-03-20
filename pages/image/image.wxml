@@ -1,0 +1,29 @@
+<!--pages/image/image.wxml-->
+<button bindtap="handleImage" size="mini">在用户相册中选择图片或者拍照</button>
+<image src="{{imagesrc}}"/>
+
+<!-- 等比例缩放，长边完全显示 -->
+<image  class="imagesize"
+        mode="aspectFit"
+        src="https://img1.baidu.com/it/u=1407750889,3441968730&fm=253&fmt=auto&app=120&f=JPEG?w=1200&h=799"
+/>
+
+<!-- 
+    等比例缩放，短边完全显示
+    show-menu-by-longpress长按图片显示发送给朋友/打开小程序的菜单。
+ -->
+<image  class="imagesize"
+        mode="aspectFill"
+        show-menu-by-longpress
+        src="https://img1.baidu.com/it/u=1407750889,3441968730&fm=253&fmt=auto&app=120&f=JPEG?w=1200&h=799"
+/>
+
+<!-- 
+    bindload 当图片载入完毕时触发
+    lazy-load 图片懒加载，在即将进入一定范围（上下三屏）时才开始加载
+ -->
+    <image  wx:for="{{10}}"
+            wx:key="item"
+            lazy-load="{{true}}"
+            bindload="Imagelazyload"
+            src="https://img1.baidu.com/it/u=1407750889,3441968730&fm=253&fmt=auto&app=120&f=JPEG?w=1200&h=799"/>

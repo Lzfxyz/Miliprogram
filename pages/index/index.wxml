@@ -1,4 +1,33 @@
 <!--index.wxml-->
-<view class="container">
-  Weixin
-</view>
+<!-- Mustache语法细节 -->
+<view>{{firstname}}{{lastname}}</view>
+<view>{{firstname + lastname}}</view>
+<view>{{age >= 18 ? "成年人" : "未成年"}}</view>
+<view>{{nowtime}}</view>
+<button bindtap="handleShow">是否显示</button>
+<view wx:if="{{isShow}}">{{isShow}}</view>
+<view class="color {{isShow ? 'color1' : ''}}">控制颜色</view>
+
+<!-- 条件判断 -->
+<view>当前分数为{{number}}</view>
+<view wx:if="{{number >= 90}}">优秀</view>
+<view wx:elif="{{number >= 70}}">良好</view>
+<view wx:elif="{{number >= 60}}">及格</view>
+<view wx:else>不及格</view>
+<button size="mini" bindtap="handleAdd">分数递增6</button>
+<button size="mini" bindtap="handleReduce">分数递减5</button>
+
+<!-- 列表渲染 -->
+<!-- key 提高性能 -->
+<view wx:for="{{['三国演义','西游记','水浒传','红楼梦']}}" wx:key="*this">{{item}}</view>
+<!-- block标签 只是一个容器，无作用 -->
+<block wx:if="{{isShow}}">
+    <view>a</view>
+    <view>b</view>
+    <view>c</view>
+</block>
+<block wx:for="{{lists}}" wx:for-item="list" wx:key="list">
+    <block wx:for="{{list}}" wx:key="item" wx:for-index="i">
+        <view>{{item}} -- {{i}}</view>
+    </block>
+</block>

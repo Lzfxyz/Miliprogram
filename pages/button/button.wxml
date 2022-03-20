@@ -1,0 +1,31 @@
+<!--pages/button/button.wxml-->
+<!--size 按钮大小 -->
+<button size="mini">按钮</button>
+<!--type  按钮的样式类型-->
+<button size="mini" type="primary">按钮</button>
+<button size="mini" type="default">按钮</button>
+<button size="mini" type="warn">按钮</button>
+<!--plain 是否镂空，背景色透明 -->
+<button size="mini" plain>按钮</button>
+<!--disabled 禁用  -->
+<button size="mini" disabled>按钮</button>
+<!--loading 转圈 -->
+<button size="mini" loading="{{isLoading}}">loading图标</button>
+<!--open-type  -->
+<button size="mini" open-type="share">触发用户转发</button>
+<button size="mini" open-type="getUserInfo" bindgetuserinfo="handleUserInfo">获取用户信息</button>
+<view>{{userInfo}}</view>
+<!--hover-class指定按钮按下去的样式类 -->
+<button hover-class="pressed">按钮</button>
+<!--
+    hover-stop-propagation 指定是否阻止本节点的祖先节点出现点击态
+    hover-start-time 按住后多久出现点击态，单位毫秒
+    hover-stay-time 手指松开后点击态保留时间，单位毫秒
+ -->
+<view class="box" hover-class="box-hover">
+    <button class="box1"
+          hover-class="box1-hover"
+          hover-start-time="{{500}}"
+          hover-stay-time="{{1000}}"
+          hover-stop-propagation="{{true}}">按钮</button>
+</view>

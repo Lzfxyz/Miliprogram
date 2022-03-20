@@ -1,0 +1,15 @@
+<!--pages/scroll/scroll.wxml-->
+<!--scroll-x x轴滚动条  -->
+<scroll-view class="box" scroll-x>
+    <view wx:for="{{10}}" wx:key="item" class="box1">{{item}}</view>
+</scroll-view>
+
+<!--scroll-y y轴滚动条  -->
+<scroll-view class="box2" scroll-y>
+    <view wx:for="{{10}}" wx:key="item" class="box1">{{item}}</view>
+</scroll-view>
+
+<!--bindscroll  监听滚动-->
+<scroll-view class="box3" scroll-y bindscroll="handleScroll">
+    <view wx:for="{{10}}" wx:key="item" class="box1">{{item}}</view>
+</scroll-view>
