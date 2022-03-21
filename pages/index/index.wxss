@@ -1,1 +1,28 @@
 /**index.wxss**/
+.boxx{
+    width: 500rpx;
+    height: 500rpx;
+    background-color: violet;
+}
+.box{
+    width: 300rpx;
+    height: 300rpx;
+    background-color: blue;
+}
+.box1{
+    width: 100rpx;
+    height: 100rpx;
+    background-color: tan;
+}
+.passBox{
+    display: flex;
+    height: 100rpx;
+    line-height: 100rpx;
+}
+.box-item{
+    flex: 1;
+    text-align: center;
+}
+.box-item1{
+    color: tan;
+}

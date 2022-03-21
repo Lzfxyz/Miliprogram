@@ -1,4 +1,61 @@
 <!--index.wxml-->
-<view class="container">
-  Weixin
+<!-- 
+    常见的事件类型
+    touchstart  手指触摸动作开始
+    touchmove	手指触摸后移动	
+    touchcancel	手指触摸动作被打断，如来电提醒，弹窗	
+    touchend	手指触摸动作结束	
+    tap	        手指触摸后马上离开	
+    longpress	手指触摸后，超过350ms再离开，与tap只会触发其中一个
+ -->
+ <view>--------常见事件--------</view>
+<!-- <view   class="box" 
+        mut-bind:touchstart="handleStart"
+        mut-bind:touchmove="handleMove"
+        mut-bind:touchcancel="handleCancel"
+        mut-bind:touchend="handleEnd"
+        mut-bind:tap="handleTap"
+        mut-bind:longpress="handleLongpress">
+</view> -->
+<view>--------事件对象--------</view>
+<!-- 
+    target 触发事件的组件一些属性值集合
+    currentTarget 当前组件的一些属性值集合
+    （前面一根手指触摸屏幕，后又加了两只）
+    touches 当前停留在屏幕中的触摸点信息的数组  array(3)
+    changedTouches 当前变化的触摸点信息的数组   array(2)
+ -->
+<view class="box" bindtap="handleEvent" id="fater">
+    <view class="box1" bindtap="handleEventson" id="son"></view>
+</view>
+
+<view>-------------事件的传参-----------</view>
+<view class="passBox">
+    <block wx:for="{{sort}}" wx:key="index">
+        <view class="box-item {{currentIndex==index ? 'box-item1':''}}" 
+              bindtap="handleChangeindex"
+              data-index="{{index}}"
+              data-item="{{item}}">{{item}}
+        </view>
+    </block>
+</view>
+
+<view>------------事件冒泡与捕获-----------</view>
+<!-- 
+    先捕获后冒泡
+    capture-bind 捕获 
+    bind:tap 冒泡
+    catch 截断捕获或者冒泡
+    -->
+<view class="boxx" 
+      capture-bind:tap="captureOuterTap"
+      bind:tap="bindOuterTap">
+    <view class="box"
+      capture-bind:tap="captureTwoTap"
+      catch:tap="bindTwoTap">
+    <view class="box1" 
+          capture-bind:tap="captureInnerTap"
+          bind:tap="bindInnerTap">
+    </view>
+</view>
 </view>
