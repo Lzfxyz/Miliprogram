@@ -1,0 +1,8 @@
+<!--components/my-pract/my-pract.wxml-->
+<view class="contain">
+    <block wx:for="{{titles}}" wx:key="*this">
+        <view class="item" bindtap="itemClick" data-index="{{index}}">
+            <text class="{{currentIndex == index ? 'item-text':''}}">{{item}}</text>
+        </view>
+    </block>
+</view>

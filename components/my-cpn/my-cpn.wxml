@@ -1,0 +1,9 @@
+<!--components/my-cpn/my-cpn.wxml-->
+<!-- 
+    在组件中不能使用id选择器、标签选择器、属性选择器
+    外部使用了标签选择器会对组件产生影响
+ -->
+<view class="title">{{title}}</view>
+<view>{{text}}</view>
+<!-- 组件里还可以注册其他组件 -->
+<cpn1/>

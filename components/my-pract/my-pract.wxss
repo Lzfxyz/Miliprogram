@@ -1,0 +1,16 @@
+/* components/my-pract/my-pract.wxss */
+.contain{
+    display: flex;
+    height: 100rpx;
+    line-height: 100rpx;
+    background-color: wheat;
+}
+.item{
+    flex: 1;
+    text-align: center;
+}
+.item-text{
+    padding: 20rpx;
+    color: red;
+    border-bottom:6rpx solid red;
+}

@@ -1,0 +1,8 @@
+<!--components/my-slots/my-slots.wxml-->
+<view>多个slot的使用</view>
+<view class="content">
+    <view class="left"><slot name="left"></slot></view>
+    <view class="center"><slot name="center"></slot></view>
+    <view class="right"><slot name="right"></slot></view>
+</view>
+<view>多个slot的使用</view>

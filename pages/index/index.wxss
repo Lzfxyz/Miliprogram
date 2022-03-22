@@ -1,1 +1,14 @@
 /**index.wxss**/
+.title{
+    font-size: 36rpx;
+    color: red;
+}
+.my-text{
+    color: blue;
+}
+.red{
+    color: red;
+}
+.blue{
+    color: blue;
+}

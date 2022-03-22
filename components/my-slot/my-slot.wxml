@@ -1,0 +1,6 @@
+<!--components/my-slot/my-slot.wxml-->
+<view>
+    <view>单个slot的使用</view>
+    <slot ></slot>
+    <view>单个slot的使用</view>
+</view>

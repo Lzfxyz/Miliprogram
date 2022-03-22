@@ -1,4 +1,37 @@
 <!--index.wxml-->
-<view class="container">
-  Weixin
-</view>
+<view class="title">您好!欢迎来到此界面</view>
+<!-- 自定义组件的一般使用 + 组件样式隔离 -->
+<my-cpn/>
+<!-- 自定义组件的传递数据/样式 -->
+<my-prop title="哈哈哈" content-style="red"/>
+<my-prop title="嘿嘿嘿" content-style="blue"/>
+<!-- 组件内部发出事件 -->
+<view>-------------组件内部发出事件 --------------</view>
+<view>{{count}}</view>
+<my-event bind:myevent="myEventListener"/>
+<view>-------------练习----------------</view>
+<my-pract titles="{{list}}"
+          bind:itemClick="myPractListener"/>
+<!-- 页面直接调用组件修改数据/方法 -->
+<button size="mini" bindtap="handleMyselClick">修改组件内的数据+2</button>
+<my-sel id="my-sel"/>
+<!--单个slot的使用 -->
+<my-slot>
+    <view>我是插入到组件slot中的内容</view>
+</my-slot>
+<my-slot>
+    <slider>滑动条</slider>
+</my-slot>
+<!-- 多个slot的使用 -->
+<!--
+    给slot设置name属性
+    在component里options对象中设置multipleSlots:true 启用多slot支持
+ -->
+ <button size="mini" bindtap="controlMyslots">控制my-slots组件的删除与添加</button>
+<block wx:if="{{isShow}}" >
+    <my-slots>
+        <view slot="left">左</view>
+        <view slot="center">中</view>
+        <view slot="right">右</view>
+    </my-slots>
+</block>
